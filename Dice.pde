@@ -12,9 +12,9 @@ void draw()
 
   for (int y = 5; y < 420; y += 60) {
     for (int x = 5; x < 500; x += 60) {
-      Die bob = new Die (x, y); //die is class, bob is object
+      Die bob = new Die (x, y); //die is class, bob is instance of the class
       bob.show();
-      sum = sum + bob.diceFace; //bob dice face is the object
+      sum = sum + bob.diceFace; //dot operator accesses member variable (diceFace) of the class
       fill (0);
     }
   }
@@ -34,7 +34,7 @@ class Die //models one single dice cube
 
   Die(int x, int y) //constructor
   {
-    //variable initializations here
+    //member variable initializations here
     myX = x;
     myY = y;
   }
