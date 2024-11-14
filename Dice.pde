@@ -12,9 +12,10 @@ void draw()
 
   for (int y = 5; y < 420; y += 60) {
     for (int x = 5; x < 500; x += 60) {
-      Die bob = new Die (x, y); //die is class, bob is instance of the class
+      Die bob = new Die (x, y); //Die is the class, this whole thing calls a new instance of the Die class, 
+                                //bob is the variable name
       bob.show();
-      sum = sum + bob.diceFace; //dot operator accesses member variable (diceFace) of the class
+      sum = sum + bob.diceFace; //dot operator accesses member variable (diceFace) of the class, calls the constructor
       fill (0);
     }
   }
